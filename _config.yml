@@ -1,8 +1,9 @@
 title: 김물개의 수영 레슨
 description: 맞춤형 성인 수영 레슨 서비스
-email: neoroman@example.com # Replace with your actual email
+email: support@rema.kr # Replace with your actual email
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://remakr.github.io" # the base hostname & protocol for your site
+url: "https://www.rema.kr" # the base hostname & protocol for your site
+phone: "010-28xx-xx67"
 
 # Build settings
 markdown: kramdown
@@ -19,9 +20,9 @@ author:
 # Social media
 social:
   - platform: instagram
-    url: # Add your Instagram URL here if available
+    url: https://www.instagram.com/seal_swimming?igsh=M2Zkcm54MXE3aXdz&utm_source=qr
   - platform: kakao
-    url: # Add your KakaoTalk ID here if available
+    url: http://pf.kakao.com/_LxeQxan
 
 # Site navigation
 header_pages:

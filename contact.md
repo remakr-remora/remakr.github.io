@@ -9,7 +9,7 @@ permalink: /contact/
   
   <div class="contact-info">
     <p>아래의 연락처로 문의하시면 24시간 내에 답변드립니다.</p>
-    <p><strong>전화:</strong> 010-2803-3167</p>
+    <p><strong>전화:</strong> {{ site.phone }}</p>
     <p><strong>이메일:</strong> {{ site.email }}</p>
   </div>
   
