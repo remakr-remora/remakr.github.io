@@ -1,0 +1,85 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.subtitle }}</p>
+      {% if page.cta_url %}
+      <a href="{{ page.cta_url }}" class="btn btn-primary">{{ page.cta_text }}</a>
+      {% endif %}
+    </div>
+  </section>
+
+  {{ content }}
+
+  {% if page.show_services %}
+  <section class="services">
+    <h2>서비스 안내</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <i class="fas fa-swimmer"></i>
+        <h3>원포인트 레슨</h3>
+        <p>1시간 체험, 1시간 레슨 (1회)</p>
+        <p class="price">5만원</p>
+        <a href="/services#onepoint" class="btn btn-outline">자세히 보기</a>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-calendar-check"></i>
+        <h3>4회권</h3>
+        <p>주중 또는 주말, 스케줄 협의</p>
+        <p class="price">16만원</p>
+        <a href="/services#fourpack" class="btn btn-outline">자세히 보기</a>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>8회권</h3>
+        <p>주중 또는 주말, 스케줄 협의</p>
+        <p class="price">24만원</p>
+        <a href="/services#eightpack" class="btn btn-outline">자세히 보기</a>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.show_testimonials %}
+  <section class="testimonials">
+    <h2>후기</h2>
+    <div class="testimonial-slider">
+      {% for testimonial in site.testimonials limit:3 %}
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"{{ testimonial.content | strip_html }}"</p>
+          </div>
+          <div class="testimonial-author">
+            <p>{{ testimonial.name }}</p>
+            <span>{{ testimonial.course }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.show_faq %}
+  <section class="faq-preview">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-items">
+      <div class="faq-item">
+        <h3>어떤 영법을 배울 수 있나요?</h3>
+        <p>자유형, 배영, 평영, 접영 등 모든 영법에 대한 교습이 가능합니다. 개인의 수준과 목표에 맞춰 맞춤형 레슨을 제공해 드립니다.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>초보자도 수강할 수 있나요?</h3>
+        <p>물에 익숙한 초급자부터 특정 영법을 개선하고자 하는 중급자까지 모두 수강 가능합니다. 단, 완전 입문자보다는 기본적인 수영이 가능한 분들께 더 적합합니다.</p>
+      </div>
+    </div>
+    <a href="/faq" class="btn btn-secondary">모든 FAQ 보기</a>
+  </section>
+  {% endif %}
+</div>

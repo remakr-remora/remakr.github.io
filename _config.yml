@@ -1,0 +1,45 @@
+title: 김물개의 수영 레슨
+description: 맞춤형 성인 수영 레슨 서비스
+email: neoroman@example.com # Replace with your actual email
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://remakr.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Author information
+author:
+  name: 김물개
+  bio: 대한적십자사 라이프가드 및 생활스포츠지도사 2급 자격증을 보유한 전문 수영 강사입니다.
+
+# Social media
+social:
+  - platform: instagram
+    url: # Add your Instagram URL here if available
+  - platform: kakao
+    url: # Add your KakaoTalk ID here if available
+
+# Site navigation
+header_pages:
+  - about.md
+  - services.md
+  - blog.md
+  - faq.md
+  - contact.md
+
+# Collections
+collections:
+  testimonials:
+    output: true
+    
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore

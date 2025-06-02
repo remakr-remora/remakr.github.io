@@ -1,0 +1,196 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <div class="post-meta">
+      <span class="post-date">{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+      {% if page.author %}
+        <span class="post-author">작성자: {{ page.author }}</span>
+      {% endif %}
+      {% if page.categories.size > 0 %}
+        <span class="post-categories">
+          카테고리:
+          {% for category in page.categories %}
+            <span class="post-category">{{ category }}</span>
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="post-navigation">
+    <div class="post-navigation-links">
+      {% if page.previous.url %}
+        <a class="prev-post" href="{{page.previous.url}}">
+          <span>&laquo; 이전 글</span>
+          <p>{{page.previous.title}}</p>
+        </a>
+      {% endif %}
+      
+      {% if page.next.url %}
+        <a class="next-post" href="{{page.next.url}}">
+          <span>다음 글 &raquo;</span>
+          <p>{{page.next.title}}</p>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="related-posts">
+    <h2>관련 글</h2>
+    <ul>
+      {% assign maxRelated = 3 %}
+      {% assign minCommonTags =  1 %}
+      {% assign maxRelatedCounter = 0 %}
+
+      {% for post in site.posts %}
+        {% if post.url != page.url %}
+          {% assign sameTagCount = 0 %}
+          {% for category in post.categories %}
+            {% if page.categories contains category %}
+              {% assign sameTagCount = sameTagCount | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+
+          {% if sameTagCount >= minCommonTags %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <span class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</span>
+            </li>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            {% if maxRelatedCounter >= maxRelated %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if maxRelatedCounter == 0 %}
+        <li>관련된 글이 없습니다.</li>
+      {% endif %}
+    </ul>
+  </div>
+</article>
+
+<style>
+  .post {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .post-header {
+    margin-bottom: 40px;
+  }
+  
+  .post-title {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .post-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .post-category {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  .post-content {
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  
+  .post-content h2 {
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .post-content p {
+    margin-bottom: 20px;
+  }
+  
+  .post-content ul, .post-content ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  
+  .post-content li {
+    margin-bottom: 10px;
+  }
+  
+  .post-navigation {
+    margin: 50px 0;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-navigation-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .prev-post, .next-post {
+    max-width: 45%;
+  }
+  
+  .prev-post span, .next-post span {
+    display: block;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  
+  .prev-post p, .next-post p {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .related-posts {
+    margin-top: 50px;
+  }
+  
+  .related-posts h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .related-posts ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .related-posts li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .related-posts a {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .related-posts .post-date {
+    font-size: 0.9em;
+    color: #666;
+  }
+</style>
