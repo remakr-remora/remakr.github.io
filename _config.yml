@@ -3,7 +3,7 @@ description: 맞춤형 성인 수영 레슨 서비스
 email: support@rema.kr # Replace with your actual email
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.rema.kr" # the base hostname & protocol for your site
-phone: "010-2803-3167"
+phone: "010-7404-8924"
 
 # Build settings
 markdown: kramdown
