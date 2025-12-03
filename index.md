@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 김물개의 수영 레슨
+title: 물개 수영
 subtitle: 맞춤형 성인 수영 레슨으로 더 효율적인 수영을 배우세요!
 cta_url: /contact
 cta_text: 문의하기
