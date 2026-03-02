@@ -1,0 +1,5 @@
+<!-- This is a simple SVG favicon with the character "수" (swim) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <rect width="16" height="16" fill="#0078aa"/>
+  <text x="8" y="10" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">수</text>
+</svg>
