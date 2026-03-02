@@ -6,15 +6,15 @@ permalink: /services/
 
 <div class="service-detail" id="onepoint">
   <h2>원포인트 레슨</h2>
-  <div class="service-price">5만원 / 1회</div>
+  <div class="service-price">6만원 / 1회</div>
   <p>특정 영법의 교정이나 짧은 시간에 집중적인 지도를 원하시는 분들을 위한 프로그램입니다.</p>
   
   <h3>서비스 포함 사항</h3>
   <ul class="service-features">
-    <li>1시간 체험, 1시간 레슨 (총 2시간)</li>
+    <li>50분 체험, 50분 레슨 (총 100분)</li>
     <li>영법 분석 및 개선점 파악</li>
     <li>맞춤형 PDF 학습 자료 제공</li>
-    <li>불만족 시 70% 환불 보장</li>
+    <li>체험 후 1회권, 4회권 또는 8회권 결제(이체) 진행</li>
   </ul>
   
   <p><small>※ 수영장 이용료는 별도로 본인 부담입니다.</small></p>
@@ -23,7 +23,7 @@ permalink: /services/
 
 <div class="service-detail" id="fourpack">
   <h2>4회권</h2>
-  <div class="service-price">16만원 (회당 4만원)</div>
+  <div class="service-price">20만원 (회당 5만원)</div>
   <p>단기간 내에 영법을 개선하고 싶은 분들을 위한 패키지 프로그램입니다. 원포인트 대비 20% 할인된 가격으로 제공됩니다.</p>
   
   <h3>서비스 포함 사항</h3>
@@ -42,7 +42,7 @@ permalink: /services/
 
 <div class="service-detail" id="eightpack">
   <h2>8회권</h2>
-  <div class="service-price">24만원 (회당 3만원)</div>
+  <div class="service-price">32만원 (회당 4만원)</div>
   <p>장기적이고 체계적인 수영 실력 향상을 원하시는 분들을 위한 패키지 프로그램입니다. 원포인트 대비 40% 할인된 가격으로 제공됩니다.</p>
   
   <h3>서비스 포함 사항</h3>

@@ -95,6 +95,14 @@ a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .site-title {
   margin: 0;
   font-size: 1.8rem;
@@ -106,13 +114,19 @@ a:hover {
 }
 
 .site-nav {
-  float: right;
   line-height: 2.5;
 }
 
 .site-nav .page-link {
   color: var(--light-text);
   margin-left: 20px;
+}
+
+.site-nav .trigger {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
 }
 
 .site-nav .page-link:hover {
@@ -123,20 +137,19 @@ a:hover {
   display: none;
 }
 
+.site-nav label[for="nav-trigger"] {
+  display: none;
+}
+
 /* Mobile menu */
 @media screen and (max-width: 600px) {
   .site-nav {
-    position: absolute;
-    top: 8px;
-    right: 15px;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    text-align: right;
+    position: relative;
+    background-color: transparent;
   }
 
   .site-nav label[for="nav-trigger"] {
     display: block;
-    float: right;
     width: 36px;
     height: 36px;
     z-index: 2;
@@ -145,7 +158,6 @@ a:hover {
 
   .site-nav .menu-icon {
     display: block;
-    float: right;
     width: 36px;
     height: 26px;
     line-height: 0;
